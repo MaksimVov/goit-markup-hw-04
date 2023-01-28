@@ -11,6 +11,7 @@
   --footer-txt-cl: #e7e9fc;
 
   /* Background colors */
+  --blue-bg-cl: #4d5ae5;
   --main-bg-cl: #ffffff;
   --dark-bg-cl: #2e2f42;
   --light-bg-cl: #f4f4fd;
@@ -93,7 +94,6 @@ a {
   display: flex;
   gap: 40px;
 }
-
 .navigation-menu-link {
   color: var(--main-txt-cl);
   font-weight: 500;
@@ -102,7 +102,6 @@ a {
 .current {
   color: var(--blue-txt-cl);
 }
-
 .navigation-menu-link:hover,
 .navigation-menu-link:focus {
   color: #404bbf;
@@ -120,11 +119,16 @@ a {
   color: #404bbf;
 }
 .hero-sectoin {
+  max-width: 1600px;
+  margin: 0 auto;
   padding: 188px 0;
-  align-items: center;
   background-color: var(--dark-bg-cl);
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+    url(./images/hero-image/people-office-1.jpg);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
 }
-
 .hero-sectoin-title {
   width: 496px;
   text-align: center;
@@ -158,6 +162,20 @@ a {
 .information-sectoin {
   padding: 120px 0;
 }
+.information-icons-list {
+  display: flex;
+  gap: 24px;
+}
+.information-icons-item {
+  width: 264px;
+  height: 112px;
+  background-color: #f4f4fd;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .information-list {
   display: flex;
 }
@@ -186,7 +204,7 @@ a {
   text-align: center;
   margin-bottom: 72px;
 }
-.images {
+.images-sectoin {
   padding-bottom: 120px;
 }
 .images-list {
@@ -209,6 +227,8 @@ a {
 }
 .team-item {
   flex-basis: calc(100% / 4 - 24px);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .team-member {
   padding: 32px 0;
@@ -230,14 +250,60 @@ a {
 .team-member-text {
   color: var(--secondery--txt-cl);
   line-height: 1.5;
+  margin-bottom: 8px;
+}
+.socials-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.socials-link {
+  width: 40px;
+  height: 40px;
+  background-color: var(--blue-bg-cl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  fill: var(--light-txt-cl);
+}
+.socials-link:hover,
+.socials-link:focus {
+  background-color: #404bbf;
+}
+.customers-sectoin {
+  padding-top: 130px;
+  padding-bottom: 120px;
+}
+.customers-list {
+  display: flex;
+  gap: 24px;
+}
+.customers-link {
+  width: 168px;
+  height: 88px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: #afb1b8;
+}
+.customers-link:hover,
+.customers-link:focus {
+  fill: #404bbf;
+  border: 1px solid #404bbf;
 }
 .footer {
   padding-top: 100px;
   padding-bottom: 100px;
   background-color: #2e2f42;
 }
-
-.footer-logo-img2-link {
+.footer-information {
+  display: flex;
+}
+.information-logo-link {
   font-size: 18px;
   color: var(--blue-txt-cl);
   letter-spacing: 0.03em;
@@ -246,7 +312,7 @@ a {
   text-transform: uppercase;
   font-family: var(--secondery-font);
 }
-.logo-img2-light {
+.information-logo-link-light {
   color: var(--light-txt-cl);
   font-size: 18px;
   letter-spacing: 0.03em;
@@ -254,11 +320,37 @@ a {
   font-weight: 800;
   font-family: var(--secondery-font);
 }
-.footer-text {
+.information-text {
   margin-top: 16px;
   color: var(--light-txt-cl);
   line-height: 1.5;
   width: 264px;
+}
+.footer-social {
+  margin-left: 120px;
+}
+.footer-social-text {
+  font-weight: 500;
+  line-height: 1.5;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+.footer-social-list {
+  display: flex;
+  gap: 16px;
+}
+.footer-social-link {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  fill: var(--light-txt-cl);
+}
+.footer-social-link:hover {
+  background-color: #31d0aa;
 }
 
 /* --------Portfolio.html-------- */
@@ -283,7 +375,7 @@ a {
   display: flex;
   justify-content: center;
   gap: 24px;
-  margin-bottom: 72px; 
+  margin-bottom: 72px;
 }
 .filter-btn {
   padding: 12px 24px;
@@ -315,6 +407,7 @@ a {
   margin-right: 24px;
   margin-bottom: 48px;
   flex-basis: calc(100% / 3 - 24px);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .innovations-item:nth-child(3n) {
   margin-right: 0;
