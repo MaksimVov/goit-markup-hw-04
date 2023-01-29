@@ -119,7 +119,8 @@ a {
   color: #404bbf;
 }
 .hero-sectoin {
-  max-width: 1600px;
+  max-width: 1440px;
+  height: 600px;
   margin: 0 auto;
   padding: 188px 0;
   background-color: var(--dark-bg-cl);
@@ -162,9 +163,15 @@ a {
 .information-sectoin {
   padding: 120px 0;
 }
-.information-icons-list {
+.information-icons {
+  width: 264px;
+  height: 112px;
+  background-color: #f4f4fd;
   display: flex;
-  gap: 24px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+  border-radius: 4px;
 }
 .information-icons-item {
   width: 264px;
@@ -283,24 +290,26 @@ a {
 .customers-link {
   width: 168px;
   height: 88px;
-  border: 1px solid #afb1b8;
+  border: 1px solid currentColor;
   border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
-  fill: #afb1b8;
+  color: #afb1b8;
+}
+.icon-company {
+  fill: currentColor;
 }
 .customers-link:hover,
 .customers-link:focus {
-  fill: #404bbf;
-  border: 1px solid #404bbf;
+  color: #404bbf;
 }
 .footer {
   padding-top: 100px;
   padding-bottom: 100px;
   background-color: #2e2f42;
 }
-.footer-information {
+.flex-footer {
   display: flex;
 }
 .information-logo-link {
@@ -349,7 +358,8 @@ a {
   border-radius: 50%;
   fill: var(--light-txt-cl);
 }
-.footer-social-link:hover {
+.footer-social-link:hover,
+.footer-social-link:focus {
   background-color: #31d0aa;
 }
 
@@ -407,7 +417,15 @@ a {
   margin-right: 24px;
   margin-bottom: 48px;
   flex-basis: calc(100% / 3 - 24px);
+}
+.innovations-link {
+  display: block;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+.innovations-link:hover,
+.innovations-link:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .innovations-item:nth-child(3n) {
   margin-right: 0;
